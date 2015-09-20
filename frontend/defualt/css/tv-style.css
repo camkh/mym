@@ -1,0 +1,296 @@
+/* METROTAB 2.0 */
+.metrotabs {
+    width:100%;
+}
+
+.mt-active {
+    box-shadow:0px 0px 6px 3px #111 inset;
+    -webkit-box-shadow:0px 0px 6px 3px #111 inset;
+    -moz-box-shadow:0px 0px 6px 3px #111 inset;
+    -o-box-shadow:0px 0px 6px 3px #111 inset;
+    -ms-box-shadow:0px 0px 6px 3px #111 inset;
+}
+
+/*
+.mt-blocksholder {
+        width:300px;
+}
+*/
+.mt-contentblockstyle {
+    padding:5px;
+    overflow:hidden;
+}
+.mt-content {
+    width:100%;
+    position:relative;
+}
+.mt-minibar {
+    width:100%;
+    height:48px;
+    cursor:pointer;
+    position:relative;
+}
+.mt-minibar > img {
+    display:block;
+    float:left;
+}
+.mt-minibar > span {
+    color:#fff;
+    display:block;
+    font-size:16px;
+    line-height:48px;
+    float:left;
+}
+
+
+.mt-tab {
+    margin:8px;
+    float:left;
+}
+
+#mt-station {
+    display:none;
+}
+
+.mt-content p {
+    text-align:justify;
+}
+
+/* END METROTAB 2.0 */
+
+
+
+
+/* TILE BUTTONS */
+
+/* Standard Buttons */
+.tile-bt {
+    text-align:center;
+    cursor:pointer;
+    width:90px;
+    height:90px;
+}
+.tile-bt a {
+    display:block;
+    padding-top:12px;
+    text-decoration: none !important;
+}
+.tile-bt img {
+    margin:0 auto 0 auto;
+    padding-bottom:5px;
+    height:48px;
+    width:48px;
+    position:relative;
+    display:block;
+}
+.carousel .tile-bt img {height:auto;width:160px;}
+.carousel .tile-bt {
+    text-align:center;
+    cursor:pointer;
+    width:180px;
+    height:220px;
+}
+
+.tile-bt span {
+    padding-bottom:10px;
+    display:block;
+}
+.tile-bt:active {
+    opacity:0.5;
+}
+/* End Standard Buttons */
+
+
+
+/* Long Buttons */
+.tile-bt-long {
+    width:190px;
+    height:90px;
+    line-height:90px;
+    text-align:center;
+    cursor:pointer;
+}
+.buttonicon {
+    height: 46px;
+    width: 46px;
+    line-height: 1;
+    margin: 10px auto;
+    display: inline-block;
+}
+.tile-bt-long a {
+    display:block;
+    text-decoration: none !important;
+}
+.tile-bt-long img {
+    vertical-align: middle;
+    margin:auto;
+    padding:0px;
+    position:relative;
+    width:48px;
+    height:48px;
+}
+.tile-bt-long span {
+    vertical-align: middle;
+    display:inline;
+}
+.tile-bt-long:active {
+    opacity:0.5;
+}
+/* End Long Buttons */
+
+
+/* Tall Buttons */
+.tile-bt-tall {
+    width:90px;
+    height:190px;
+    text-align:center;
+    cursor:pointer;
+}
+.tile-bt-tall a {
+    display:block;
+    padding-top:52px;
+    text-decoration: none !important;
+}
+.tile-bt-tall img {
+    margin:0 auto 0 auto;
+    padding-bottom:54px;
+    height:48px;
+    width:48px;
+    position:relative;
+    display:block;
+}
+.tile-bt-tall span {
+    padding-bottom:20px;
+    display:block;
+}
+.tile-bt-tall:active {
+    opacity:0.5;
+}
+/* End Tall Buttons */
+
+
+/* Large Buttons */
+.tile-bt-large {
+    text-align:center;
+    cursor:pointer;
+    width:190px;
+    height:190px;
+}
+.tile-bt-large a {
+    display:block;
+    padding-top:52px;
+    text-decoration: none !important;
+}
+.tile-bt-large img {
+    margin:0 auto 0 auto;
+    padding-bottom:22px;
+    height:80px;
+    width:80px;
+    position:relative;
+    display:block;
+}
+.tile-bt-large span {
+    font-size:16px;
+    padding-bottom:20px;
+    display:block;
+}
+.tile-bt-large:active {
+    opacity:0.5;
+}
+
+/* End Large Buttons */
+
+/* END TILE BUTTONS */
+
+
+
+
+/* BACKGROUND LIST */
+
+/* Solid Colors */
+.solid-lightblue { background:#E4F0F7; }
+.solid-blue { background:#00BBE2; }
+.solid-blue-2 { background:#2C84EE; }
+.solid-darkblue { background:#044E94; }
+.solid-violetred { background:#781766; }
+.solid-red { background:#E51400;}
+.solid-red-2 { background:#E81750; }
+.solid-pink { background:#FF539B; }
+.solid-purple { background:#D02090; }
+.solid-orange { background:#FB8F02; }
+.solid-orange-2 { background:#FF6600; }
+.solid-orange-3 { background:#DD5F37; }
+.solid-coral { background:#CD5B45; }
+.solid-lightgreen { background:#F5FFFA; }
+.solid-green { background:#67B239; }
+.solid-green-2 {background:#96BF01; }
+.solid-darkgreen { background:#016C38; }
+.solid-olive { background:#999900}
+.solid-grass { background:#CDCD00; }
+.solid-darkred { background:#5F0000; }
+.solid-gold { background:#FEE9AE; }
+.solid-yellow { background:#F7D100; }
+.solid-black { background:#000; }
+.solid-smoke { background:#F5F5F5; }
+.solid-white { background:#fff; }
+/* End Solid Colors */
+
+.light-text {
+    padding-bottom: 0px;
+    display: block;
+    font-size: 14px;
+    line-height: 1;
+    display: block;
+    color:#fff;
+}
+.portfolio-item-holder{text-align: center;border-bottom: 1px solid #e2e2e2;}
+/*========== START SHADOW LIST ==========*/
+
+.shadow-white, .shadow-black, .shadow-blue, .shadow-green, .shadow-red, .shadow-orange {
+    display:inline-block;
+    text-decoration:none;
+}
+.shadow-white:hover {
+    box-shadow:0px 0px 6px 3px #fff;
+    -webkit-box-shadow:0px 0px 6px 3px #fff;
+    -moz-box-shadow:0px 0px 6px 3px #fff;
+    -o-box-shadow:0px 0px 6px 3px #fff;
+    -ms-box-shadow:0px 0px 6px 3px #fff;
+}
+.shadow-blue:hover {
+    box-shadow:0px 0px 6px 3px #38D1F7;
+    -webkit-box-shadow:0px 0px 6px 3px #38D1F7;
+    -moz-box-shadow:0px 0px 6px 3px #38D1F7;
+    -o-box-shadow:0px 0px 6px 3px #38D1F7;
+    -ms-box-shadow:0px 0px 6px 3px #38D1F7;
+}
+.shadow-green:hover {
+    box-shadow:0px 0px 6px 3px #AACA37;
+    -webkit-box-shadow:0px 0px 6px 3px #AACA37;
+    -moz-box-shadow:0px 0px 6px 3px #AACA37;
+    -o-box-shadow:0px 0px 6px 3px #AACA37;
+    -ms-box-shadow:0px 0px 6px 3px #AACA37;
+}
+.shadow-red:hover {
+    box-shadow:0px 0px 6px 3px #E81750;
+    -webkit-box-shadow:0px 0px 6px 3px #E81750;
+    -moz-box-shadow:0px 0px 6px 3px #E81750;
+    -o-box-shadow:0px 0px 6px 3px #E81750;
+    -ms-box-shadow:0px 0px 6px 3px #E81750;
+}
+.shadow-black:hover {
+    box-shadow:0px 0px 6px 3px #444;
+    -webkit-box-shadow:0px 0px 6px 3px #444;
+    -moz-box-shadow:0px 0px 6px 3px #444;
+    -o-box-shadow:0px 0px 6px 3px #444;
+    -ms-box-shadow:0px 0px 6px 3px #444;
+}
+.shadow-orange:hover {
+    box-shadow:0px 0px 6px 3px #FF6600;
+    -webkit-box-shadow:0px 0px 6px 3px #FF6600;
+    -moz-box-shadow:0px 0px 6px 3px #FF6600;
+    -o-box-shadow:0px 0px 6px 3px #FF6600;
+    -ms-box-shadow:0px 0px 6px 3px #FF6600;
+}
+
+/*========== END SHADOW LIST ==========*/

@@ -1,0 +1,243 @@
+/* Header */a {-webkit-transition:all .4s ease-in-out;-moz-transition:all .4s ease-in-out;-o-transition:all .4s ease-in-out;-ms-transition:all .4s ease-in-out;transition:all .4s ease-in-out}a:link {color:#333;text-decoration:none}a:visited {color:#333;text-decoration:none}
+.header {
+    border-top: 1px solid #FFFFFF;
+    border-bottom: 2px solid #BB2E29;
+	background: #F1F1F1 url(https://lh3.googleusercontent.com/-rciKqO_TLEc/Vf5O6g8mxtI/AAAAAAAAOK0/Ne48aXOUdnQ/s0-Ic42/md_bg2.png) left 58% repeat-x;
+/*    border-bottom: 1px solid rgb(240, 240, 240);*/
+}
+.header .navbar .navbar-inner .brand {
+    padding: 16px 0;
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 30px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}.header .navbar .navbar-inner .brand.imgLogo {padding: 0;}.header .navbar .navbar-inner .brand.imgLogo img {height:55px;width:auto}
+.header .navbar .navbar-inner .brand span{
+    color: #BD2F29;
+}
+.header .navbar .navbar-inner select {
+    display: none;
+}
+.header .navbar {
+    margin-bottom: 0;
+}
+.header .navbar .nav {
+    float: right;
+    margin-right: 0;
+}
+.header .navbar .nav > li > a {
+    display: block;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 15px 25px;
+}
+.header .navbar .nav > li:last-child > a {
+    padding-right: 0;
+}
+.header .navbar .nav > li:last-child > a:hover, .header .navbar .nav > li:last-child.active > a {
+    padding-right: 25px;
+}
+
+.header .navbar .nav > li > a:focus,
+.header .navbar .nav > li > a:hover {
+/*  background-color: rgb(240, 240, 240);*/
+  color: #BB2E29;
+}
+.header .navbar .nav > .active > a, .header .navbar .nav > .active > a:hover, .header .navbar .nav > .active > a:focus {
+    color: #BB2E29;
+    text-decoration: none;
+/*    background-color: #BB2E29;*/
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+.header .dropdown-menu li > a:hover, .header .dropdown-menu li > a:focus, .header .dropdown-submenu:hover > a {
+    background-image: none;
+}
+.dropdown-menu li > a {
+  padding: 5px 20px;
+}
+.header .navbar .navbar-inner {
+/*    min-height: 80px;*/
+    padding-left: 0px;
+    padding-right: 0px;
+    background: #F1F1F1;
+/*    background: #F1F1F1 url(https://lh3.googleusercontent.com/-dWD6fLTXGKI/UcPyBdjWZuI/AAAAAAAAB7o/3yHEMBx00iM/s67/pattern-header.png) repeat-x;*/
+    
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border: none;
+}
+.header .navbar .nav li.dropdown.open > .dropdown-toggle, .header .navbar .nav li.dropdown.active > .dropdown-toggle, .header .navbar .nav li.dropdown.open.active > .dropdown-toggle {
+/*    background-color: rgb(245, 245, 245);*/
+    color: #BB2E29;
+}
+.header .dropdown-menu {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+}
+
+/* Transition */
+.contact .our-office a, .socket a, .footer a, .footer img, .pricing-table, .about-author a, .comment-header a, .comment-box .media-heading a, .about-author a, .clients .well, .header .navbar .nav > li:last-child > a, .blog img, .blog-title a, .sidebar .recent-post ul li a {
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+.header .navbar .nav > li:last-child > a{padding-right:25px}
+/*search bar*/
+.header .navbar-form {  position: absolute;  top: -100%;  left: 0;  right: 0;  margin: 0;  padding: 0;  height: 55px;  z-index: 9001;  -webkit-transition: all .3s;  -o-transition: all .3s;  transition: all .3s;  border: 0;  border-bottom: 1px solid #e1e2e3;}
+.header .navbar-form.open {  top: 0;}.header .navbar-form .form-group {  height: 100%;  width: 100%;}.header .navbar-form .form-control {  height: 100%;  border: 0;  border-radius: 0;  width: 100%;  padding-left: 30px;}.header .navbar-form .has-feedback .form-control-feedback {  height: 30px;  cursor: pointer;  top: 65%;  margin-top: -15px;  line-height: 30px;  margin-right: 10px;  color: #c1c2c3;  font-size: 1.5em;  pointer-events: auto;}.header #h-search-form > div > i, .input-icon .icon {  position: absolute;  display: block;  margin: 18px 8px 0 8px;  line-height: 14px;  color: #bdbdbd;}
+/* Landscape phones and down */
+@media (max-width: 480px)  {
+
+}
+   
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+    /* Header */
+    .services .well {
+        margin-bottom: 30px;
+    }
+
+    .section-page-header {
+        text-align: center;
+    }
+
+    .section-page-header .container .form-horizontal {
+        float: none;
+    }
+
+    .header {
+        margin-left: -20px;
+        margin-right: -20px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .footer {
+        margin-right: -20px;
+        margin-left: -20px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .recent-post .span1 {
+        margin-right: 0;
+    }
+
+    .footer .span1, .sidebar .recent-post .span1 {
+        float: left;
+        width: 85px;
+    }
+
+    .footer .span1 img {
+        width: 75px;
+        float: left;
+    }
+
+    .sidebar .recent-post .span1 img {
+        width: 75px;
+        float: left;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        -ms-border-radius: 2px;
+        -o-border-radius: 2px;
+        border-radius: 2px;
+    }
+
+    .socket {
+        margin-right: -20px;
+        margin-left: -20px;
+        padding-right: 20px;
+        padding-left: 20px;
+        text-align: center;
+    }
+
+    .social-links {
+        float: none;
+        margin-top: 10px;
+    }
+
+    .header .navbar .navbar-inner {
+        text-align: center;
+    }
+
+    .header .navbar .navbar-inner .brand {
+        margin-left: 0;
+        float: none;
+        display: inline;
+    }
+
+    .header .navbar .navbar-inner .brand-wrapper {
+        width: 100%;
+        padding: 25px 0;
+    }
+
+    .header .navbar .navbar-inner .nav {
+        display: none;
+    }
+
+    .header .navbar .navbar-inner select {
+        margin-bottom: 30px;
+        text-align: left;
+        display: inline-block;
+        width: 80%;
+    }
+
+    .about-author .span2 {
+        width: 20%;
+        float: left;
+        margin-right: 5%;
+    }
+
+    .about-author .span6 {
+        width: 75%;
+        float: left;
+    }
+
+    .comment-header .span1 {
+        width: 10%;
+        float: left;
+        margin-right: 5%;
+    }
+
+    .comment-header .span5 {
+        width: 85%;
+        float: left;
+    }
+}
+     
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+    .header .navbar .navbar-inner {
+        position: relative;
+    }
+
+    .header .navbar .navbar-inner .brand {
+        margin-left: 0;
+    }
+
+    .header .navbar .navbar-inner .nav {
+        display: none;
+    }
+
+    .header .navbar .navbar-inner select {
+        display: block;
+        float: right;
+        margin-top: 25px;
+    }
+}
+     
+/* Large desktop */
+@media (min-width: 1200px) {
+}
+.contentAd{border-bottom: 1px solid #e2e2e2;padding:10px;text-align: center}.header .navbar .nav > li > a.img-icon {padding: 5px 15px;}.icon-image{line-height: 14px;text-align: center;}.icon-all{display: inline-block;width: 24px;height: 24px;background-image:url(http://4.bp.blogspot.com/-XUWNH1PHuOM/VbWf4c-DqSI/AAAAAAAAKgE/-m5PHo-9sas/s0/icon.png);background-repeat: no-repeat;}.last-item {background-position: -192px 0px;}.icon-production {background-position: -48px 0px;}.icon-album {background-position: -144px 0px;}.icon-artist {background-position: -240px 0px;}/*left menu*/svg {color: #B20000;font-size: 35px;}svg:hover {color: #FFA500}.icon {display: inline-block;width: 1em;height: 1em;fill: currentColor;}.img-icon {padding:0;margin:0}

@@ -1,0 +1,17 @@
+<?php echo $__env->make('frontend.partials.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<div class="wrapper-blog">
+	<div id="content-con">
+		<div class="maincontent">
+			<div id="primary">
+				<?php echo $__env->yieldContent('content'); ?>
+			</div>
+			<!-- primary -->
+		</div>
+		<!-- maincontent -->
+	</div>
+	<?php echo $__env->make('frontend.partials.left-sidebar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+	<?php echo $__env->make('frontend.partials.right-sidebar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+	<!-- content-con -->
+</div>
+<!-- wrapper-blog -->
+<?php echo $__env->make('frontend.partials.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

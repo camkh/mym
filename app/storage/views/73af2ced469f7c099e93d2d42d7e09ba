@@ -1,0 +1,185 @@
+<?php $__env->startSection('title'); ?>
+	Home
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('breadcrumb'); ?>
+	<ol class="breadcrumb">
+		<li><a href="<?php echo Config::get('app.url'); ?>">Home</a></li>
+		<li><a href="#">Library</a></li>
+		<li class="active">Data</li>
+	</ol>
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('content'); ?>
+<?php
+date_default_timezone_set('Asia/Phnom_Penh');
+ $currentDate = date('Y-m-d');
+?>
+<div class="col-sm-8">
+	<div class="category-tab lastest-post">
+    
+		<!-- ============Slider end here========= -->
+               <!-- slideshow --> 
+        <div id="carousel-home" class="carousel slide" data-ride="carousel" style="margin-top: 2px;">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+          <?php if(!empty($banner)): ?>
+                <?php $i=0;?>
+                <?php foreach($banner as $ban): ?>
+                    <?php if($ban->ban_position == 'top-c'): ?>
+                        <?php if($ban->ban_enddate >= $currentDate): ?>
+                        <li data-target="#carousel-home" data-slide-to="<?php echo $i; ?>" class="<?php echo $i==0 ? 'active':''; ?>"></li>
+                        <?php $i++;?>
+                     <?php endif; ?>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+            <?php endif; ?>
+          </ol>
+        
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+          <?php if(!empty($banner)): ?>
+                <?php $i=0;?>
+                <?php foreach($banner as $ban): ?>
+                    <?php if($ban->ban_position == 'top-c'): ?>
+                        <?php if($ban->ban_enddate >= $currentDate): ?>
+                        <div class="item <?php echo $i==0 ? 'active':''; ?>">
+                            <a class="banner-link" href="<?php echo @$ban->ban_link; ?>" target="_blank"><img src="<?php echo Config::get('app.url'); ?>upload/user-banner/<?php echo $ban->ban_image; ?>" style="width: 100%;max-height: 250px;" /></a>
+                            <div class="carousel-caption">
+                                ...
+                            </div>
+                        </div>
+                        <?php $i++;?>
+                        <?php endif; ?>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+            <?php endif; ?>
+          </div>
+        
+          <!-- Controls -->
+          <a class="left carousel-control" href="#carousel-home" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#carousel-home" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+        <!-- end slideshow --> 
+
+                <div class="features_items">
+					<ul class="nav nav-tabs">
+						<li><strong>The latest products</strong>  &nbsp;&nbsp;&nbsp; &frasl;</li>
+						<li>Products : <span class="number-display"><?php echo ($dataProduct)?count($dataProduct):''; ?></span></li>
+					</ul>
+                </div>
+         
+		<div class="col-lg-12" style="padding:0;">
+            <?php if(!empty($dataProduct)): ?>
+                <?php
+                //var_dump($dataProduct);
+                 $i=1;?>
+                <?php foreach($dataProduct as $product): ?>
+                <?php if($i % 4 == 1): ?>
+                    <div class="row">
+                <?php endif; ?>
+     			<div class="col-sm-3">
+    				<div class="product-image-wrapper">
+    					<div class="single-products">
+    						<div class="productinfo text-center">
+    							<a href="<?php echo Config::get('app.url'); ?>page/<?php echo $product->store_id; ?>/my/detail/<?php echo $product->id; ?>">
+                                    <?php if($product->thumbnail): ?>
+    								    <img src="<?php echo Config::get('app.url'); ?>upload/product/thumb/<?php echo $product->thumbnail; ?>" alt="<?php echo $product->title; ?>" />
+                                    <?php else: ?>
+                                        <img src="<?php echo Config::get('app.url'); ?>upload/product/thumb/<?php echo $product->thumbnail; ?>" alt="<?php echo $product->title; ?>" />
+                                    <?php endif; ?>
+    							</a>
+    							<h2><?php echo $product->title; ?></h2>
+    							<p><?php echo $product->price; ?> $</p>
+    							<a href="<?php echo Config::get('app.url'); ?>page/<?php echo $product->store_id; ?>/my/detail/<?php echo $product->id; ?>">View Details</a>
+    						</div>
+    						<img src="<?php echo Config::get('app.url'); ?>/frontend/images/home/sale.png" class="new" alt="" />
+    					</div>
+    				</div>
+    			</div>
+                <?php if($i % 4 == 0): ?>
+                    </div>
+                <?php endif; ?>
+                <?php $i++;?>             
+                <?php endforeach; ?>
+                <?php if($i % 4 != 1): ?>
+                    </div>
+                <?php endif; ?>
+            <?php endif; ?>
+            
+            <?php if(!empty($banner)): ?>
+                <div class="col-lg-12" style="padding:0;">
+                <?php foreach($banner as $ban): ?>
+                    <?php if($ban->ban_position == 'footer'): ?>
+                        <?php if($ban->ban_enddate >= $currentDate): ?>
+                        <a class="banner-link" href="<?php echo @$ban->ban_link; ?>" target="_blank"><img src="<?php echo Config::get('app.url'); ?>upload/user-banner/<?php echo $ban->ban_image; ?>" style="width: 100%;max-height: 90px;" /></a>
+                        <?php endif; ?>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+                </div>
+            <?php endif; ?>
+		</div>
+	</div>
+    <?php echo $dataProduct->links(); ?>
+
+    <?php if(!empty($widtget)): ?>
+        <?php foreach($widtget as $showWidtget): ?>
+            <?php if($showWidtget->status): ?>
+                <?php if($showWidtget->title == 'New Arrival Products'): ?>
+                    <?php echo $__env->make('frontend.modules.store.partials.widget-new-arrival', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+                <?php elseif($showWidtget->title == 'Hot Promotion Products'): ?>
+                    <?php echo $__env->make('frontend.modules.store.partials.widget-hot-promote', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+                <?php elseif($showWidtget->title == 'Secondhand Products'): ?>
+                    <?php echo $__env->make('frontend.modules.store.partials.widget-secondhand', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+                <?php elseif($showWidtget->title == 'Monthly Pay  Products'): ?>
+                    <?php echo $__env->make('frontend.modules.store.partials.widget-monthly-pay', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+                <?php elseif($showWidtget->title == 'Urgent Sale'): ?>
+                <?php endif; ?>
+            <?php endif; ?>
+        <?php endforeach; ?>
+    <?php endif; ?>
+</div>
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('left'); ?>
+	<?php echo $__env->make('frontend.modules.store.partials.slidebar.left_product_link', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    
+    <?php if(!empty($banner)): ?>
+        <?php foreach($banner as $ban): ?>
+            <?php if($ban->ban_position == 'ls'): ?>
+                <?php if($ban->ban_enddate >= $currentDate): ?>
+                    <a class="banner-link" href="<?php echo @$ban->ban_link; ?>" target="_blank"><img src="<?php echo Config::get('app.url'); ?>upload/user-banner/<?php echo $ban->ban_image; ?>" style="width: 100%;" /></a>
+                <?php endif; ?>
+            <?php endif; ?>
+        <?php endforeach; ?>
+    <?php endif; ?>
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('right'); ?>
+<?php
+$memberTool = array();
+if(!empty($toolView)):
+    foreach($toolView as $tool):
+        if($tool->type =='tool_memeber_status' && $tool->status==1):?>
+            <?php echo $__env->make('frontend.modules.store.partials.slidebar.visitor_counter', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+        <?php 
+        endif;
+        endforeach;
+endif;
+?>
+<?php if(!empty($banner)): ?>
+    <?php foreach($banner as $ban): ?>
+        <?php if($ban->ban_position == 'rs'): ?>
+            <?php if($ban->ban_enddate >= $currentDate): ?>
+                <a class="banner-link" href="<?php echo @$ban->ban_link; ?>" target="_blank"><img src="<?php echo Config::get('app.url'); ?>upload/user-banner/<?php echo $ban->ban_image; ?>" style="width: 100%;" /></a>
+            <?php endif; ?>
+        <?php endif; ?>
+    <?php endforeach; ?>
+<?php endif; ?>
+    
+	
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('frontend.modules.store.layout.layout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
